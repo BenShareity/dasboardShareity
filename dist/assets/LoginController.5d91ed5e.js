@@ -1,0 +1,1 @@
+import{S as a}from"./ServerCall.bf212017.js";import{u as n}from"./session.f47d2680.js";const o=n(),l={login:async(s,e)=>{try{return await a.post("/auth/login",{email:s,password:e}).then(t=>(o.setUserData(t.data.access_token),!0))}catch(r){throw r}},logout:async()=>{o.clearUserData()}};export{l as L};
